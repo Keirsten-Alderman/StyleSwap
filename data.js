@@ -1,26 +1,21 @@
-// ============================================================
-// data.js — ALL the fake data for your prototype lives here.
-//
-// There is no database. Everything below is made up, and that is
-// on purpose: never put real people's names, emails, phone numbers
-// or addresses in this file.
-//
-// To change what appears on the Explore page, edit LISTINGS.
-// Each item is one card. Keep the same fields (id, name, category,
-// description) or ask Copilot to add new ones everywhere they're needed.
-// ============================================================
-
+// Fictional sample inventory for the StyleSwap student prototype.
 const STARTUP = {
-  name: "YourStartup",
-  tagline: "One sentence that says what your startup does.",
-  pitch: "Who is your customer, what problem do they have, and why is your solution better than what they use today?"
+  name: "StyleSwap",
+  tagline: "Rent it, Swap it, Love it",
+  pitch: "Borrow a little confidence, swap something you love, and find your next favorite outfit right here on campus."
 };
 
 const LISTINGS = [
-  { id: 1, name: "Sample listing A", category: "Category 1", description: "A short description of this item." },
-  { id: 2, name: "Sample listing B", category: "Category 2", description: "A short description of this item." },
-  { id: 3, name: "Sample listing C", category: "Category 1", description: "A short description of this item." },
-  { id: 4, name: "Sample listing D", category: "Category 3", description: "A short description of this item." },
-  { id: 5, name: "Sample listing E", category: "Category 2", description: "A short description of this item." },
-  { id: 6, name: "Sample listing F", category: "Category 3", description: "A short description of this item." }
+  { id: 1, name: "The Sunday Trench", category: "Outerwear", description: "Soft, oversized and perfect for a rainy coffee run.", type: "Rental", size: "M", price: 6, owner: "Jamie", emoji: "🧥", art: "lilac" },
+  { id: 2, name: "Cherry Knit", category: "Tops", description: "A cozy little red cardigan with vintage buttons.", type: "Swap", size: "S", price: null, owner: "Morgan", emoji: "🧶", art: "rose" },
+  { id: 3, name: "After Hours Dress", category: "Dresses", description: "A satin slip dress made for a night worth remembering.", type: "Rental", size: "S", price: 8, owner: "Avery", emoji: "👗", art: "peach" },
+  { id: 4, name: "Good Day Denim", category: "Bottoms", description: "Broken-in straight-leg jeans with plenty of life left.", type: "Swap", size: "M", price: null, owner: "Riley", emoji: "👖", art: "sky" },
+  { id: 5, name: "Tiny Treasure Bag", category: "Accessories", description: "A tiny beaded bag that makes every outfit a little happier.", type: "Rental", size: "One size", price: 4, owner: "Casey", emoji: "👜", art: "butter" },
+  { id: 6, name: "Cloud Nine Sneakers", category: "Shoes", description: "Comfy white sneakers, cleaned up and ready to roam.", type: "Rental", size: "M", price: 5, owner: "Quinn", emoji: "👟", art: "sage" },
+  { id: 7, name: "Sunday Market Blazer", category: "Outerwear", description: "A relaxed-fit blazer that means business (or brunch).", type: "Swap", size: "L", price: null, owner: "Taylor", emoji: "🧥", art: "butter" },
+  { id: 8, name: "Little Wildflower Top", category: "Tops", description: "A light, floral top for sunny walks between classes.", type: "Rental", size: "XS", price: 4, owner: "Jordan", emoji: "👚", art: "rose" },
+  { id: 9, name: "Weekend Wrap", category: "Dresses", description: "A breezy wrap dress that can go from day to dinner.", type: "Swap", size: "M", price: null, owner: "Sam", emoji: "👗", art: "lilac" },
+  { id: 10, name: "Golden Hour Scarf", category: "Accessories", description: "A soft, sunny scarf that's been on many adventures.", type: "Rental", size: "One size", price: 3, owner: "Drew", emoji: "🧣", art: "peach" },
+  { id: 11, name: "Campus Classic Loafers", category: "Shoes", description: "Polished loafers for presentations and everywhere after.", type: "Rental", size: "S", price: 6, owner: "Blair", emoji: "👞", art: "sky" },
+  { id: 12, name: "The Comfy Cord", category: "Bottoms", description: "Soft corduroy trousers with a high waist and roomy pockets.", type: "Swap", size: "L", price: null, owner: "Emery", emoji: "👖", art: "sage" }
 ];

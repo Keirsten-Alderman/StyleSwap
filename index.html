@@ -3,91 +3,168 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YourStartup</title>
-  <meta name="description" content="A student startup prototype for BSAD 281.">
+  <meta name="theme-color" content="#fff9f6">
+  <meta name="description" content="Rent, swap, and share clothes with fellow students at StFX.">
+  <title>StyleSwap — Rent it, Swap it, Love it</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- =========================================================
-       HEADER: logo text + navigation.
-       Each link points to a "view" further down the page (#home, #explore, #about).
-       ========================================================= -->
   <header class="site-header">
-    <a class="brand" href="#home" id="brand-name">YourStartup</a>
-    <nav aria-label="Main">
+    <a class="brand" href="#home" aria-label="StyleSwap home">
+      <span class="brand-mark" aria-hidden="true">s</span>
+      <span>style<span class="brand-accent">swap</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
       <a href="#home">Home</a>
-      <a href="#explore">Explore</a>
-      <a href="#about">About</a>
+      <a href="#catalogue">Explore</a>
+      <a href="#list-item">List an item</a>
+      <a href="#community">Community</a>
     </nav>
+    <a class="nav-cta" href="#catalogue">Find a fit <span aria-hidden="true">↗</span></a>
   </header>
 
   <main>
-
-    <!-- =======================================================
-         VIEW 1: HOME — what you do, for whom, and why it matters.
-         ======================================================= -->
-    <section id="home" data-view>
+    <section id="home" class="view home-view" data-view>
       <div class="hero">
-        <p class="eyebrow">Prototype</p>
-        <h1 id="tagline">One sentence that says what your startup does.</h1>
-        <p class="lead" id="pitch">
-          Who is your customer, what problem do they have, and why is your
-          solution better than what they use today?
-        </p>
-        <a class="button" href="#explore">See it in action</a>
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="live-dot"></span> The StFX campus closet, reimagined</span>
+          <h1>Rent it,<br>Swap it,<br><em>Love it</em></h1>
+          <p class="hero-description">Borrow a little confidence. Swap something you love. Find your next favorite outfit right here at StFX.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#catalogue">Explore the closet <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#community">Meet your community <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-proof">
+            <div class="avatar-stack" aria-hidden="true"><span>J</span><span>M</span><span>A</span><span>+</span></div>
+            <p><strong id="hero-member-count">128</strong> StFX students making more of what they own</p>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="A curated collection of student fashion">
+          <div class="hero-art-note note-top"><span>✳</span> campus closet, open</div>
+          <div class="art-circle"></div>
+          <div class="feature-piece feature-coat"><span aria-hidden="true">🧥</span><small>borrowed twice<br>loved forever</small></div>
+          <div class="feature-piece feature-bag"><span aria-hidden="true">👜</span></div>
+          <div class="feature-piece feature-scarf"><span aria-hidden="true">🧣</span></div>
+          <div class="hero-art-note note-bottom"><span>↗</span> one good find<br>away</div>
+          <span class="sparkle sparkle-one">✳</span><span class="sparkle sparkle-two">✦</span>
+        </div>
       </div>
 
-      <div class="steps">
-        <div class="card">
-          <h2>1. Step one</h2>
-          <p>Describe the first thing a customer does.</p>
+      <div class="ticker" aria-label="StyleSwap benefits">
+        <span>wear it your way</span><i>✳</i><span>keep good things moving</span><i>✳</i><span>made for campus life</span><i>✳</i><span>wear it your way</span>
+      </div>
+
+      <section class="home-section">
+        <div class="section-heading">
+          <div><span class="eyebrow">A better kind of wardrobe</span><h2>New-to-you<br>looks good on you.</h2></div>
+          <a class="text-link" href="#catalogue">See what's around <span aria-hidden="true">→</span></a>
         </div>
-        <div class="card">
-          <h2>2. Step two</h2>
-          <p>Describe what happens next.</p>
+        <div class="steps-grid">
+          <article class="step-card step-rose"><span class="step-number">01 / FIND</span><span class="step-icon" aria-hidden="true">⌕</span><h3>Find your fit</h3><p>Browse real closet favorites, listed by students nearby.</p></article>
+          <article class="step-card step-lilac"><span class="step-number">02 / CONNECT</span><span class="step-icon" aria-hidden="true">↗</span><h3>Make it a match</h3><p>Send a rental or swap request. Keep the conversation on campus.</p></article>
+          <article class="step-card step-butter"><span class="step-number">03 / PASS IT ON</span><span class="step-icon" aria-hidden="true">♡</span><h3>Good things go around</h3><p>List your own pieces and help the community closet grow.</p></article>
         </div>
-        <div class="card">
-          <h2>3. Step three</h2>
-          <p>Describe the result the customer gets.</p>
-        </div>
+      </section>
+
+      <section class="home-cta">
+        <div><span class="eyebrow">A closet with good company</span><h2>Your next favorite<br>is already here.</h2></div>
+        <a class="button button-light" href="#catalogue">Take a look <span aria-hidden="true">↗</span></a>
+        <span class="cta-flower" aria-hidden="true">✳</span>
+      </section>
+    </section>
+
+    <section id="catalogue" class="view inner-view" data-view hidden>
+      <div class="page-intro">
+        <span class="eyebrow">The StFX campus closet</span>
+        <h1>Good finds,<br><em>close by.</em></h1>
+        <p>One-of-a-kind pieces, shared by StFX students like you. Find something to borrow or trade.</p>
+      </div>
+      <div class="catalogue-toolbar">
+        <label class="search-control"><span class="visually-hidden">Search items</span><span aria-hidden="true">⌕</span><input id="search-box" type="search" placeholder="Search the closet…" autocomplete="off"></label>
+        <label class="filter-control"><span>Category</span><select id="category-filter"><option value="all">Everything</option><option value="Outerwear">Outerwear</option><option value="Tops">Tops</option><option value="Dresses">Dresses</option><option value="Bottoms">Bottoms</option><option value="Shoes">Shoes</option><option value="Accessories">Accessories</option></select></label>
+        <label class="filter-control"><span>Available for</span><select id="type-filter"><option value="all">Any kind</option><option value="Rental">Rental</option><option value="Swap">Swap</option></select></label>
+        <label class="filter-control"><span>Size</span><select id="size-filter"><option value="all">Any size</option><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="One size">One size</option></select></label>
+      </div>
+      <div class="catalogue-meta"><p id="results-count" aria-live="polite"></p><button class="clear-filters" id="clear-filters" type="button">Clear filters <span aria-hidden="true">↺</span></button></div>
+      <div class="listing-grid" id="listing-grid"></div>
+      <div class="empty-state" id="empty-message" hidden><span aria-hidden="true">✳</span><h2>No matches just yet</h2><p>Try a different search or clear your filters.</p></div>
+    </section>
+
+    <section id="list-item" class="view inner-view" data-view hidden>
+      <div class="page-intro">
+        <span class="eyebrow">Pass the good stuff on</span>
+        <h1>Your closet,<br><em>their new favorite.</em></h1>
+        <p>Add a piece to the community closet. This prototype saves your listing in this browser only.</p>
+      </div>
+      <div class="form-layout">
+        <form class="listing-form" id="listing-form">
+          <label class="form-field">What are you sharing?<input name="name" required maxlength="60" placeholder="e.g. Vintage denim jacket"></label>
+          <div class="form-row">
+            <label class="form-field">Category<select name="category" required><option value="">Choose one</option><option>Outerwear</option><option>Tops</option><option>Dresses</option><option>Bottoms</option><option>Shoes</option><option>Accessories</option></select></label>
+            <label class="form-field">Size<select name="size" required><option value="">Choose one</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>One size</option></select></label>
+          </div>
+          <div class="form-row">
+            <label class="form-field">Share it as<select name="type" required><option>Rental</option><option>Swap</option><option>Rental or swap</option></select></label>
+            <label class="form-field">Rental price per day <span class="optional-note">(optional)</span><span class="price-input"><span>$</span><input name="price" type="number" min="0" max="100" step="1" placeholder="5"></span></label>
+          </div>
+          <label class="form-field">A little about it<textarea name="description" required maxlength="180" rows="3" placeholder="Condition, fit, or where you'd wear it…"></textarea></label>
+          <label class="form-field">Your first name <span class="optional-note">(made-up name for this demo)</span><input name="owner" required maxlength="24" placeholder="e.g. Jamie"></label>
+          <button class="button button-dark form-submit" type="submit">Add to the community closet <span aria-hidden="true">↗</span></button>
+          <p class="form-message" id="listing-message" role="status"></p>
+        </form>
+        <aside class="form-aside"><span class="aside-flower" aria-hidden="true">✳</span><span class="eyebrow">Keep it circulating</span><h2>One little listing.<br>Lots of new looks.</h2><p>Every piece added means one more way for someone on campus to find something they love.</p><div class="aside-stat"><strong id="aside-listing-count">0</strong><span>pieces in the closet<br>and counting</span></div></aside>
       </div>
     </section>
 
-    <!-- =======================================================
-         VIEW 2: EXPLORE — a list built from the fake data in data.js.
-         ======================================================= -->
-    <section id="explore" data-view hidden>
-      <h1>Explore</h1>
-      <p class="muted">These examples are fake. They come from <code>data.js</code>.</p>
-
-      <label class="search">
-        <span>Search</span>
-        <input type="search" id="search-box" placeholder="Type to filter…">
-      </label>
-
-      <p class="muted" id="saved-count"></p>
-      <div class="grid" id="listing-grid"></div>
-      <p class="empty" id="empty-message" hidden>Nothing matches your search.</p>
+    <section id="community" class="view inner-view community-view" data-view hidden>
+      <div class="page-intro">
+        <span class="eyebrow">The StFX community, together</span>
+        <h1>Look what we<br><em>set in motion.</em></h1>
+        <p>When one StFX student shares, the whole campus gets more to choose from. Here's a little snapshot of our growing community.</p>
+      </div>
+      <div class="community-banner">
+        <div><span class="eyebrow">Your community closet</span><h2 id="community-intro">128 students.<br>So many second looks.</h2><p>Every new student brings fresh finds, more swaps, and more possibilities for everyone.</p></div>
+        <div class="network-art" aria-label="Illustration of students connected through shared clothing"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="network-center">♡</span><span class="network-node node-one">J</span><span class="network-node node-two">M</span><span class="network-node node-three">A</span><span class="network-node node-four">R</span><span class="network-node node-five">S</span><span class="network-node node-six">✳</span></div>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card"><span class="stat-label">Pieces to discover</span><strong id="stat-listings">0</strong><span class="stat-caption">and growing with every listing</span></article>
+        <article class="stat-card stat-card-lilac"><span class="stat-label">Potential connections</span><strong id="stat-connections">0</strong><span class="stat-caption">unique ways students can connect</span></article>
+        <article class="stat-card stat-card-rose"><span class="stat-label">Requests sent</span><strong id="stat-requests">0</strong><span class="stat-caption">local demo requests, not transactions</span></article>
+      </div>
+      <div class="network-section">
+        <div class="network-copy"><span class="eyebrow">The network effect</span><h2>More students,<br><em>more possibilities.</em></h2><p>As our community grows, so does the number of potential student-to-student connections. It's a simple idea with a lovely ripple effect.</p><p class="network-note">Potential connections = students × (students − 1) ÷ 2. Numbers below are illustrative and include this demo's activity.</p></div>
+        <div class="growth-chart" role="img" aria-label="Illustrative chart showing potential connections growing with community size">
+          <div class="chart-row"><span class="chart-label">12 students</span><div class="chart-track"><div class="chart-bar bar-small"></div></div><strong>66</strong></div>
+          <div class="chart-row"><span class="chart-label">64 students</span><div class="chart-track"><div class="chart-bar bar-medium"></div></div><strong>2,016</strong></div>
+          <div class="chart-row"><span class="chart-label">128 students</span><div class="chart-track"><div class="chart-bar bar-large"></div></div><strong id="chart-connections">8,128</strong></div>
+          <div class="chart-footnote">Potential community connections</div>
+        </div>
+      </div>
+      <div class="activity-panel"><div class="activity-heading"><div><span class="eyebrow">Just you, on this device</span><h2>Your demo activity</h2></div><button id="clear-activity" class="clear-filters" type="button">Clear activity <span aria-hidden="true">↺</span></button></div><div id="activity-list" class="activity-list"><p class="activity-empty">No requests yet. Find a piece you love and send a pretend request.</p></div></div>
     </section>
-
-    <!-- =======================================================
-         VIEW 3: ABOUT — your team and your story.
-         ======================================================= -->
-    <section id="about" data-view hidden>
-      <h1>About us</h1>
-      <p>Tell the story of why your team started this company.</p>
-      <p>Use first names only, or no names at all — this site is public.</p>
-    </section>
-
   </main>
 
-  <!-- Keep this footer. Your site must say it is a student project. -->
   <footer class="site-footer">
-    <p>Student prototype for BSAD 281 at St. Francis Xavier University. Not a real company — all data is fictional.</p>
+    <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">s</span><span>style<span class="brand-accent">swap</span></span></a>
+    <p>A student prototype for St. Francis Xavier University. All listings and people are fictional. Requests are demos only — no real payments, accounts, or transactions.</p>
+    <a href="#home" class="back-top">Back to the top ↑</a>
   </footer>
 
-  <!-- Scripts load in this order: data first, then the code that uses it. -->
+  <dialog class="request-dialog" id="request-dialog" aria-labelledby="dialog-title">
+    <form id="request-form">
+      <button class="dialog-close" type="button" id="dialog-close" aria-label="Close dialog">×</button>
+      <span class="eyebrow" id="dialog-eyebrow">Just a demo</span>
+      <h2 id="dialog-title">Send a request</h2>
+      <p class="dialog-item" id="dialog-item"></p>
+      <div id="rental-options" class="form-field"><label for="rental-duration">How long would you borrow it?</label><select id="rental-duration"><option>2 days</option><option>A weekend</option><option>1 week</option></select></div>
+      <div id="swap-options" class="form-field" hidden><label for="swap-offer">What would you swap?</label><input id="swap-offer" maxlength="70" placeholder="e.g. My floral weekend dress"></div>
+      <p class="dialog-note">This sends a pretend request saved only on this device. No payments or real transactions.</p>
+      <button class="button button-dark form-submit" id="send-request" type="submit">Send demo request <span aria-hidden="true">↗</span></button>
+      <p class="form-message" id="request-message" role="status"></p>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>

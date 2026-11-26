@@ -12,6 +12,15 @@ Keep this up to date as you go — a few lines per work session is enough. It's 
 
 Copy this block for each session.
 
+### Session — 2026-11-26 — driver: [not recorded]
+
+- **Goal for this session:** Capture the current StyleSwap prototype changes in the project log.
+- **Key prompts we gave Copilot** (paste the important ones):
+  1. “track changes that i make and add them to the projecct log”
+- **What worked:** The starter page has been developed into a branded StFX campus clothing rental and swap demo. It now includes fictional sample listings, search and category/type/size filters, a form to add listings, rental/swap request dialogs, locally saved demo activity, and community statistics. The page styling and responsive layouts were substantially redesigned.
+- **What broke, and how we fixed it:** No breakages or fixes were identifiable from the current changes.
+- **Committed?** no — these changes were uncommitted when recorded. The code changes were already present in the workspace; their author and original work date are not recorded here.
+
 ### Session — [date] — driver: [first name]
 
 - **Goal for this session:**
