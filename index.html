@@ -66,6 +66,39 @@
         </div>
       </section>
 
+      <section class="social-promo" aria-labelledby="social-promo-title">
+        <div class="social-promo-heading">
+          <span class="eyebrow">Good style is better shared</span>
+          <h2 id="social-promo-title">Take the campus closet<br><em>to your feed.</em></h2>
+          <p>Help more StFX students find StyleSwap. Pick a post idea, copy a ready-to-share caption, and add your own outfit or closet find.</p>
+        </div>
+        <div class="promo-grid">
+          <article class="promo-card promo-instagram">
+            <span class="promo-platform"><span aria-hidden="true">◎</span> Instagram idea</span>
+            <h3>Show off a campus find</h3>
+            <p>Share an outfit photo or carousel: what you found, how you styled it, and what you are ready to pass along.</p>
+            <blockquote class="promo-caption">A fresh look, already loved. Find your next campus closet favorite with StyleSwap at StFX. Share what you found, swap something you love, and keep good style in circulation.</blockquote>
+            <p class="promo-hashtags">#StyleSwap #StFXStyle #CampusStyle #WearItAgain</p>
+            <button class="button promo-copy-button" type="button" data-copy-promo="instagram">Copy Instagram caption <span aria-hidden="true">▣</span></button>
+          </article>
+          <article class="promo-card promo-tiktok">
+            <span class="promo-platform"><span aria-hidden="true">♪</span> TikTok idea</span>
+            <h3>Three looks, one campus closet</h3>
+            <p>Make a quick outfit-change video with a rented piece, a swap find, or something from your own closet to share.</p>
+            <blockquote class="promo-caption">POV: your next campus outfit was already in someone's closet. Find, rent, or swap your next favorite with StyleSwap at StFX.</blockquote>
+            <p class="promo-hashtags">#StyleSwap #StFXStyle #CampusOutfits #OutfitRepeat</p>
+            <button class="button promo-copy-button" type="button" data-copy-promo="tiktok">Copy TikTok caption <span aria-hidden="true">▣</span></button>
+          </article>
+        </div>
+        <div class="promo-actions">
+          <p>Captions are just a starting point. Add your own photos or video before posting.</p>
+          <div>
+            <button class="text-link promo-hashtag-button" id="copy-hashtags" type="button">Copy suggested hashtags</button>
+            <button class="button button-dark" id="share-campaign" type="button">Share StyleSwap <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </section>
+
       <section class="home-cta">
         <div><span class="eyebrow">A closet with good company</span><h2>Your next favorite<br>is already here.</h2></div>
         <a class="button button-light" href="#catalogue">Take a look <span aria-hidden="true">↗</span></a>
@@ -77,7 +110,7 @@
       <div class="page-intro">
         <span class="eyebrow">The StFX campus closet</span>
         <h1>Good finds,<br><em>close by.</em></h1>
-        <p>One-of-a-kind pieces, shared by StFX students like you. Find something to borrow or trade.</p>
+        <p>One-of-a-kind pieces, shared by StFX students like you. Rentals have a 10% service fee; clothing swaps are always free.</p>
       </div>
       <div class="catalogue-toolbar">
         <label class="search-control"><span class="visually-hidden">Search items</span><span aria-hidden="true">⌕</span><input id="search-box" type="search" placeholder="Search the closet…" autocomplete="off"></label>
@@ -88,6 +121,63 @@
       <div class="catalogue-meta"><p id="results-count" aria-live="polite"></p><button class="clear-filters" id="clear-filters" type="button">Clear filters <span aria-hidden="true">↺</span></button></div>
       <div class="listing-grid" id="listing-grid"></div>
       <div class="empty-state" id="empty-message" hidden><span aria-hidden="true">✳</span><h2>No matches just yet</h2><p>Try a different search or clear your filters.</p></div>
+    </section>
+
+    <section id="transaction" class="view inner-view request-page" data-view hidden>
+      <a class="text-link request-back" href="#catalogue">← Back to the closet</a>
+      <div class="page-intro">
+        <span class="eyebrow">Rental checkout · demo</span>
+        <h1>Review your<br><em>rental.</em></h1>
+        <p>Check the rental details and estimated total before sending your request. No payment will be collected.</p>
+      </div>
+      <div class="request-layout">
+        <aside class="request-summary">
+          <div class="request-summary-art" id="transaction-art" aria-hidden="true"></div>
+          <span class="eyebrow">Your selected piece</span>
+          <h2 id="transaction-name"></h2>
+          <p id="transaction-details"></p>
+        </aside>
+        <form class="request-form" id="rental-form">
+          <label class="form-field" for="rental-duration">Rental duration
+            <select id="rental-duration" name="duration"><option value="2">2 days</option><option value="2">A weekend (2 days)</option><option value="7">1 week</option></select>
+          </label>
+          <div class="price-breakdown" aria-live="polite">
+            <p><span id="rental-rate-label">Rental</span><strong id="rental-subtotal">$0.00</strong></p>
+            <p><span>Service fee (10%)</span><strong id="rental-service-fee">$0.00</strong></p>
+            <p class="price-breakdown-total"><span>Estimated total</span><strong id="rental-total">$0.00</strong></p>
+          </div>
+          <p class="request-demo-note">Demo only: submitting records a local request. It does not reserve the item or charge you.</p>
+          <button class="button button-dark form-submit" type="submit">Submit rental request <span aria-hidden="true">↗</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section id="swap-request" class="view inner-view request-page" data-view hidden>
+      <a class="text-link request-back" href="#catalogue">← Back to the closet</a>
+      <div class="page-intro">
+        <span class="eyebrow">A free clothing swap</span>
+        <h1>Make a swap<br><em>proposal.</em></h1>
+        <p>Tell the owner what you would like to trade for their piece. Swaps are free and have no service fee.</p>
+      </div>
+      <div class="request-layout">
+        <aside class="request-summary">
+          <div class="request-summary-art" id="swap-art" aria-hidden="true"></div>
+          <span class="eyebrow">The piece you want</span>
+          <h2 id="swap-name"></h2>
+          <p id="swap-details"></p>
+          <p class="swap-free-note">Free swap · no service fee</p>
+        </aside>
+        <form class="request-form" id="swap-form">
+          <label class="form-field" for="swap-offer">What would you offer?
+            <input id="swap-offer" name="offer" required maxlength="70" placeholder="e.g. My floral weekend dress">
+          </label>
+          <label class="form-field" for="swap-description">Tell them a little about it
+            <textarea id="swap-description" name="description" required maxlength="180" rows="4" placeholder="Share the size, condition, or why it might be a good match."></textarea>
+          </label>
+          <p class="request-demo-note">Demo only: your proposal is saved on this device and is not sent to the listed owner.</p>
+          <button class="button button-dark form-submit" type="submit">Submit swap proposal <span aria-hidden="true">↗</span></button>
+        </form>
+      </div>
     </section>
 
     <section id="list-item" class="view inner-view" data-view hidden>
@@ -105,7 +195,7 @@
           </div>
           <div class="form-row">
             <label class="form-field">Share it as<select name="type" required><option>Rental</option><option>Swap</option><option>Rental or swap</option></select></label>
-            <label class="form-field">Rental price per day <span class="optional-note">(optional)</span><span class="price-input"><span>$</span><input name="price" type="number" min="0" max="100" step="1" placeholder="5"></span></label>
+            <label class="form-field">Rental price per day <span class="optional-note">(optional; swaps are always free)</span><span class="price-input"><span>$</span><input name="price" type="number" min="0" max="100" step="1" placeholder="5"></span></label>
           </div>
           <label class="form-field">A little about it<textarea name="description" required maxlength="180" rows="3" placeholder="Condition, fit, or where you'd wear it…"></textarea></label>
           <label class="form-field">Your first name <span class="optional-note">(made-up name for this demo)</span><input name="owner" required maxlength="24" placeholder="e.g. Jamie"></label>
@@ -147,20 +237,21 @@
   <footer class="site-footer">
     <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">s</span><span>style<span class="brand-accent">swap</span></span></a>
     <p>A student prototype for St. Francis Xavier University. All listings and people are fictional. Requests are demos only — no real payments, accounts, or transactions.</p>
+    <a href="images/listings/CREDITS.txt" class="back-top">Photo credits</a>
     <a href="#home" class="back-top">Back to the top ↑</a>
   </footer>
 
   <dialog class="request-dialog" id="request-dialog" aria-labelledby="dialog-title">
     <form id="request-form">
       <button class="dialog-close" type="button" id="dialog-close" aria-label="Close dialog">×</button>
-      <span class="eyebrow" id="dialog-eyebrow">Just a demo</span>
-      <h2 id="dialog-title">Send a request</h2>
+      <span class="eyebrow">Choose an option</span>
+      <h2 id="dialog-title">How would you like to request it?</h2>
       <p class="dialog-item" id="dialog-item"></p>
-      <div id="rental-options" class="form-field"><label for="rental-duration">How long would you borrow it?</label><select id="rental-duration"><option>2 days</option><option>A weekend</option><option>1 week</option></select></div>
-      <div id="swap-options" class="form-field" hidden><label for="swap-offer">What would you swap?</label><input id="swap-offer" maxlength="70" placeholder="e.g. My floral weekend dress"></div>
-      <p class="dialog-note">This sends a pretend request saved only on this device. No payments or real transactions.</p>
-      <button class="button button-dark form-submit" id="send-request" type="submit">Send demo request <span aria-hidden="true">↗</span></button>
-      <p class="form-message" id="request-message" role="status"></p>
+      <label class="form-field" for="request-type">Request type
+        <select id="request-type"><option value="Rental">Rent · 10% service fee</option><option value="Swap">Swap · free</option></select>
+      </label>
+      <p class="dialog-note">Your choice takes you to the rental summary or swap proposal form. Both flows are demos.</p>
+      <button class="button button-dark form-submit" id="continue-request" type="submit">Continue <span aria-hidden="true">↗</span></button>
     </form>
   </dialog>
 
