@@ -59,6 +59,15 @@ Copy this block for each session.
 - **What broke, and how we fixed it:** Nothing identified.
 - **Committed?** no — changes are uncommitted.
 
+### Session — 2026-11-26 — driver: [not recorded]
+
+- **Goal for this session:** Keep the decorative asterisk/sparkle glyphs on the website theme-colored on phones.
+- **Key prompts we gave Copilot** (paste the important ones):
+  1. “on the phone view only when there is a * emjoi it does not show well it comes up as a green emoji. on the computer it is perfect pink and goes with the website theme can we change it so it will show up on theme on the phone to”
+- **What worked:** Added Unicode text-presentation selectors to the decorative star glyphs so mobile platforms render them as theme-colored text symbols instead of emoji-style graphics.
+- **What broke, and how we fixed it:** Nothing identified.
+- **Committed?** no — changes are uncommitted.
+
 ### Session — [date] — driver: [first name]
 
 - **Goal for this session:**
